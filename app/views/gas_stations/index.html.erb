@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Estaciones de servicio</h1>
 
 <div class="row">
@@ -11,6 +9,7 @@
          <h3>Nombre: <%= gas_station.name %></h3>
          <p>Dirección<%= gas_station.address %></p>
          <p>ID:<%= gas_station.id_station %></p>
+         <p>Correo de Contacto: <%= gas_station.user.email if gas_station.user %></p>
          <p><%= link_to 'Detalles', gas_station, class: 'btn btn-primary' %>
          <%= link_to 'Editar', edit_gas_station_path(gas_station), class:'btn btn-warning' %>
          <%= link_to 'eliminar', gas_station, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></p>
